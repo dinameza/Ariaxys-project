@@ -1,1 +1,1 @@
-# NeuronTech-project
+# Ariaxys-project
