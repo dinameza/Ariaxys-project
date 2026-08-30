@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #0d3b66; /* Azul profundo */
-    --secondary-color: #0093b6; /* Azul mineral/celeste */
+    --primary-color: #0d3b66;
+    --secondary-color: #0093b6;
     --light-bg: #f8f9fa;
     --dark-text: #333333;
     --white: #ffffff;
@@ -29,22 +29,9 @@ body {
     z-index: 1000;
 }
 
-/* Estilo para el logo del header */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
+.logo { display: flex; align-items: center; gap: 12px; }
 .logo-img { height: 50px; }
-
-.brand-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: 3px;
-}
-
+.brand-name { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); letter-spacing: 3px; }
 .nav-links { display: flex; gap: 20px; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--dark-text); font-weight: 500; }
 .nav-links a:hover { color: var(--secondary-color); }
@@ -58,8 +45,6 @@ body {
 .hero-text p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
 .btn-primary { background: var(--primary-color); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; }
 .btn-secondary { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; margin-left: 10px; }
-
-/* Geometría sutil (Logo abstracto con CSS) */
 .hero-geometry { width: 300px; height: 400px; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); opacity: 0.2; }
 
 /* SECCIONES GENERALES */
@@ -69,7 +54,7 @@ body {
 h2 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px; text-align: center; }
 .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 50px; }
 
-/* SERVICIOS (Grid para 4 tarjetas) */
+/* SERVICIOS */
 .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
 .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary-color); transition: transform 0.3s; }
 .card:hover { transform: translateY(-5px); }
@@ -94,42 +79,21 @@ h2 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px; text-a
 .grid-why { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
 .grid-why h3 { margin-bottom: 10px; color: var(--secondary-color); }
 
-/* PROYECTOS */
-.project-placeholder { background: var(--white); border: 2px dashed #ccc; padding: 60px; text-align: center; border-radius: 10px; }
-.project-placeholder i { font-size: 3rem; color: #ccc; margin-bottom: 20px; }
-
 /* NOSOTROS */
 #nosotros .container { max-width: 800px; text-align: left; }
 #nosotros p { margin-bottom: 15px; font-size: 1.1rem; }
 
-/* CONTACTO */
-.contact-form { max-width: 600px; margin: 0 auto 40px; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-.contact-form button { width: 100%; cursor: pointer; }
-.contact-direct { text-align: center; }
-.btn-whatsapp { display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: 600; }
+/* CONTACTO (Solo WhatsApp) */
+.contact-direct { text-align: center; max-width: 700px; }
+.btn-whatsapp { display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: 600; font-size: 1.2rem; transition: transform 0.3s; }
+.btn-whatsapp:hover { transform: scale(1.05); }
+.contact-subtext { margin-top: 20px; font-size: 0.9rem; color: #777; }
 
 /* FOOTER */
 footer { background: var(--primary-color); color: white; padding: 50px 5%; text-align: center; }
-
-/* Estilo para el logo del footer */
-.footer-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
+.footer-brand { display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 20px; }
 .logo-footer { height: 60px; }
-
-.brand-name-footer {
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 3px;
-}
-
+.brand-name-footer { font-size: 2rem; font-weight: 700; color: white; letter-spacing: 3px; }
 .footer-links { margin: 20px 0; }
 .footer-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
 .copyright { font-size: 0.8rem; opacity: 0.7; }
@@ -143,7 +107,6 @@ footer { background: var(--primary-color); color: white; padding: 50px 5%; text-
     .hero-geometry { display: none; }
     .grid-problems { grid-template-columns: 1fr; }
     
-    /* Ajuste de botones para el celular (para que no se monten) */
     .hero-buttons {
         display: flex;
         flex-direction: column;
